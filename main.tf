@@ -44,7 +44,6 @@ resource "google_compute_instance" "hashicat" {
     initialize_params {
       image = "ubuntu-os-cloud/ubuntu-1804-lts"
     }
-  department = "devops"
   }
 
   network_interface {
@@ -61,6 +60,8 @@ resource "google_compute_instance" "hashicat" {
 
   labels = {
     name = "hashicat"
+    department = "devops"
+    billable = true
   }
 
 }
